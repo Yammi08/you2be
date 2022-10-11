@@ -1,0 +1,126 @@
+header
+{
+    background-color: pink;
+    height: 40px;
+    display: flex;
+
+
+    box-shadow: 5px 5px 7px gray;
+}
+header a
+{
+    text-align: center;
+    font-size: xx-large;
+    text-decoration: none;
+    color: white;
+    margin-left: 70px;
+}
+body
+{
+    background: #C9D6FF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+form
+{
+    margin: auto;
+    display: flex;
+}
+input
+{
+    padding: 1px 6px;
+    border-radius: 45px;
+    border-style: none;
+    color: rgb(100, 100, 100);
+}
+.input-search
+{
+    flex: 2;
+    display: flex;
+    width: 600px;
+    margin: auto;
+}
+.search-input
+{
+    
+    margin-left: 50px;
+    width: 450px;
+    transition: border-radius 0.2s, box-shadow 0.2s, transform 0.2s;
+    
+    font-size:larger;
+}
+.search-input:focus
+{
+    transform:translate(-2px,2px);
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px rgba(128, 128, 128, 0.589);
+}
+
+.input-search input, .input-search button
+{
+    
+    margin: auto 10px;
+    
+}
+.input-search input, .btn
+{
+    height: 30px;
+}
+.input-user
+{
+    display: flex;
+    margin: auto;
+}
+.input-user a
+{
+    display: contents;
+}
+.input-user button
+{
+    margin: auto;
+    margin-right: 10px;
+    height: 30px;
+}
+.btn
+{
+    border-style: none;
+    width: 100px;
+    background-color: white;
+    border-color: white;
+    border-radius: 5px;
+    color: gray;
+    transition: all 0.5s;
+}
+.btn:hover
+{
+    background-color: rgb(230, 230, 230);
+    cursor: pointer;
+}
+.btn:active
+{
+    background-color: rgb(160, 160, 160);
+    color: whitesmoke;
+}
+.front-page
+{
+    text-align: center;
+    
+    color:whitesmoke;
+    font-size: xx-large;
+    font-family: 'Secular One', sans-serif;
+}
+.icon-page
+{
+    background-color: pink;
+    width: 150px;
+    height: 150px;
+    line-height: 4.5;
+    vertical-align: middle;
+    margin: auto;
+    margin-top: 200px;
+    border-radius: 30px;
+
+
+    box-shadow: 10px 10px 7px gray;
+}

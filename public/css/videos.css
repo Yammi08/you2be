@@ -1,0 +1,16 @@
+.div-video
+{
+    display: inline-grid;
+    background-color: aliceblue;
+    border-radius: 10px;
+    width: 250px;
+    height: 200px;
+    margin: 10px;
+    padding: 10px;
+    
+}
+.div-video h1
+{
+    text-align: center;
+
+}

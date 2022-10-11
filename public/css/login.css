@@ -1,0 +1,28 @@
+.center-vertical
+{
+    position: absolute;
+    bottom: 250px;
+    width: 100%;
+}
+.form-vertical
+{
+    
+    flex-direction: column;
+    width: 180px;
+    
+}
+.form-vertical input
+{
+    height: 20px;
+    padding: 5px;
+}
+.form-vertical button
+{
+    margin: auto;
+    
+}
+.item-vertical
+{
+    margin-bottom: 20px;
+    display: inline-block;
+}
