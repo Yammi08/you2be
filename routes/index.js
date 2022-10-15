@@ -3,7 +3,7 @@ const database = require('../data/controllers/crud');
 const router = express.Router();
 router.get('/',(req,res)=>
 {
-    res.render('index.html',{title:''});
+    res.render('index.html',{user :req.session.user});
 
 });
 router.get('/search-video',async (req,res)=>
@@ -22,6 +22,7 @@ router.get('/search-video',async (req,res)=>
     {
         elements.push(s);
     }
-    res.render('videos.html',{elements});
+    res.render('videos.html',{elements,
+        user :req.session.user});
 });
 module.exports = router;

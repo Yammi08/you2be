@@ -4,8 +4,12 @@ const User = require('../data/models/user');
 const bc = require('../config/encrypt');
 router.get('/login',(req,res)=>
 {
-    
-    res.render('login.html');
+    if(req.session.user != undefined)
+    {
+        res.redirect('/');
+        return;
+    }
+    res.render('login.html',{user:undefined});
     
 });
 router.post('/login',async (req,res)=>
@@ -22,12 +26,22 @@ router.post('/login',async (req,res)=>
         res.send('not found or password/email incorrect. ._.');
         return;
     }
-    
+    req.session.user = {
+        id:data._id,
+        user: data.user,
+        date: data.date,
+        email: data.email
+    };
     res.redirect('/login');
 })
 router.get('/signin',(req,res)=>
 {
-    res.render('signin.html');
+    if(req.session.user != undefined)
+    {
+        res.redirect('/');
+        return;
+    }
+    res.render('signin.html',{user:undefined});
 });
 router.post('/signin',async (req,res)=>
 {
@@ -47,6 +61,7 @@ router.post('/signin',async (req,res)=>
         const pass = await bc.encrypt(req.body.password);
         new User(req.body.user,pass,req.body.email).save();
     }
+    
     res.redirect('/login');
 });
 module.exports = router;

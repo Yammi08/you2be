@@ -10,6 +10,7 @@ class User
         this.email = email;
         this.date = Date.now;
     }
+    
     toJson()
     {
         const result =

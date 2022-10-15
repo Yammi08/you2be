@@ -8,9 +8,15 @@
         </form>
 
     </div>
+    <%if(user == undefined)
+    {%>
     <div class="input-user">
         <a href="/login"><button class="btn">log in</button></a>
         <a href="/signin"><button class="btn">sign up</button></a>
     </div>
-    
+    <%}
+    else
+    {%>
+        <div class=""></div>
+    <%}%>
 </header>

@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyparser = require('body-parser');
+const session = require('express-session');
 const path = require('path');
 const app = express();
 
@@ -9,6 +10,11 @@ const video = require('../data/controllers/crud');
 //midleware
 app.use(bodyparser.urlencoded({extended:false}));
 app.use(bodyparser.json());
+app.use(session({
+    secret:'NywCat~',
+    resave: true,
+    saveUninitialized:true
+}));
 
 app.set('port',process.env.PORT || 3000);
 app.set('views',path.join(__dirname,'../views'));
