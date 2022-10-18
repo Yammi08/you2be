@@ -9,7 +9,7 @@ router.get('/login',(req,res)=>
         res.redirect('/');
         return;
     }
-    res.render('login.html',{user:undefined});
+    res.render('pages/user/login.html',{user:undefined});
     
 });
 router.post('/login',async (req,res)=>
@@ -41,7 +41,7 @@ router.get('/signin',(req,res)=>
         res.redirect('/');
         return;
     }
-    res.render('signin.html',{user:undefined});
+    res.render('pages/user/signin.html',{user:undefined});
 });
 router.post('/signin',async (req,res)=>
 {

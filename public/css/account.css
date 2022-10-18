@@ -1,0 +1,70 @@
+.line-flex
+{
+    display: flex;
+    margin: 10px 0px;
+    
+}
+.line-flex p
+{
+    margin-left: 5px;
+}
+.text
+{
+    font-family: 'Secular One', sans-serif;
+}
+.container
+{
+    margin-top: 30px;
+    color: white;
+}
+.container-information
+{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 400px;
+    align-items: center;
+    border-radius: 20px;
+    background-color: pink;
+    margin: auto;
+    box-sizing: border-box;
+}
+.title
+{
+    text-align: center;
+    font-size: xx-large;
+    color: white;
+    
+}
+
+.container-title
+{
+    background-color: pink;
+    
+    width: 50%;
+    min-width: 400px;
+    border-radius: 20px;
+    
+}
+.container-add a
+{
+    text-decoration: none;
+}
+.container-options
+{
+    margin: 30px 50px 0px 50px;
+    display: flex;
+    justify-content:space-between;
+    width: 100%;
+}
+.container-add
+{
+    border-radius: 30px;
+    padding: 0px 5px;
+    width: fit-content;
+    background-color: pink;
+}
+.container-videos
+{
+    display: flex;
+}

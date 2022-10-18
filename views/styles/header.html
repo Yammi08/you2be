@@ -8,15 +8,16 @@
         </form>
 
     </div>
+    <div class="input-user">
     <%if(user == undefined)
     {%>
-    <div class="input-user">
         <a href="/login"><button class="btn">log in</button></a>
         <a href="/signin"><button class="btn">sign up</button></a>
-    </div>
     <%}
     else
     {%>
-        <div class=""></div>
+        <a href="/account"><button class="icon btn"> account</button></a>
+        <a href="/logout"></a><button class="sign-out btn">sign-out</button></a>
     <%}%>
+    </div>
 </header>
