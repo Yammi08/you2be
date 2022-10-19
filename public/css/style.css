@@ -27,13 +27,16 @@ form
     margin: auto;
     display: flex;
 }
-input
+input,textarea
 {
     padding: 1px 6px;
-    border-radius: 45px;
+    border-radius: 10px;
     border-style: none;
     color: rgb(100, 100, 100);
+    
 }
+
+
 .input-search
 {
     flex: 2;

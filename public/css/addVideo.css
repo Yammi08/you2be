@@ -1,0 +1,11 @@
+.description
+{
+    resize: none;
+}
+.center-vertical-video
+{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-self: center;
+}
