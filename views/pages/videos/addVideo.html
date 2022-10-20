@@ -1,9 +1,9 @@
 <%- contentFor('main') %>
 <div class="center-vertical-video">
-    <form action="/signin" class="form-vertical" method="POST">
-        <input type="file" name="dat" id="">
+    <form action="/account/add" class="form-vertical" method="POST">
+        <input type="file" name="file" id="file">
         <input name="name" type="text" placeholder="titulo" class="item-vertical">
-        <textarea name="" id="" cols="30" rows="10" class="item-vertical description"></textarea>
+        <textarea name="description" placeholder="descripcion" id="" cols="30" rows="10" class="item-vertical description"></textarea>
         <button type="submit" class="btn" class="item-vertical">cargar</button>
     </form>
 </div>

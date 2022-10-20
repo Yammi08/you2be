@@ -18,4 +18,9 @@ router.get('/account',async(req,res)=>
    }
     res.render('pages/user/account/info.html',{user: req.session.user,videos:vid});
 });
+router.get('/sing-out',(req,res)=>
+{
+    req.session.user = undefined;
+    res.redirect('/');
+})
 module.exports = router;
