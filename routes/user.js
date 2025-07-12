@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const database = require('../data/controllers/crud');
-const form = require('formidable')
+const form = require('formidable');
+const { ObjectId } = require('mongodb');
 router.get('/account',async(req,res)=>
 {
     
@@ -9,18 +10,19 @@ router.get('/account',async(req,res)=>
     {
         res.redirect('/');
         return;
+
     }
-    
-   const videos = database.findAll({user:req.session.user});
+   const videos = await database.findAllVideos({ user:req.session.user.id});
    let vid=[];
    for await(let v of videos)
    {
         vid.push(v);
    }
-    res.render('pages/user/account/info.html',{user: req.session.user,videos:vid});
+    res.render('info.html',{user: req.session.user,videos:vid});
 });
 router.get('/sing-out',(req,res)=>
 {
+    res.clearCookie('idUser')
     req.session.user = undefined;
     res.redirect('/');
 })

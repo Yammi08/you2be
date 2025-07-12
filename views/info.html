@@ -1,0 +1,44 @@
+<%- contentFor('main') %>
+    <div class="container">
+        <ol class="container-information">
+            <li class="line-flex text">
+                <p>
+                    <%=user.user%>
+                </p>
+            </li>
+            <li class="line-flex text">
+                <p>
+                    <%=user.email%>
+                </p>
+            </li>
+        </ol>
+        <div class="container-about-videos">
+            <div class="container-options">
+                <div class="container-title">
+                    <h1 class="title">videos</h1>
+                </div>
+                <div class="container-add">
+                    <a href="/account/add">
+                        <h1 class="title">+</h1>
+                    </a>
+                </div>
+            </div>
+            <div class="container-videos">
+                <%for(v of videos) {%>
+                    <div class="div-video" id=<%=v._id%>>
+                        <p class="title-video">
+                            <%=v.name%>
+                        </p>
+                        <a href=<%=v.video %>><img class="image-page" src=<%=v.pathImage %> alt=""></a>
+                        <p>
+                            <%=v.description%>
+                        </p>
+                    </div>
+                    <%}%>
+            </div>
+
+        </div>
+
+    </div>
+
+    <%- contentFor('scripts') %>

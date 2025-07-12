@@ -13,18 +13,11 @@ class User
     
     toJson()
     {
-        const result =
-        {
-            'user': this.user,
-            'password': this.password,
-            'email': this.email,
-            'date': this.date
-        }
-        return result;
+        return JSON.parse(JSON.stringify(this));
     }
-    save()
+    async save()
     {
-        crud.add(this.toJson());
+        await crud.add(this.toJson());
     }
 }
 module.exports = User;

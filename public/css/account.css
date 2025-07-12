@@ -64,7 +64,15 @@
     width: fit-content;
     background-color: pink;
 }
-.container-videos
+.container-about-videos
 {
     display: flex;
+    flex-wrap: wrap;
+}
+.image-page
+{
+    width: 100%;
+    justify-self: center;
+    height: 150px;
+    object-fit: cover;
 }

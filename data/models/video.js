@@ -1,34 +1,24 @@
-
 const crud = require('../controllers/crud')
 class Video
 {
-    constructor(name,description,video,user)
+    constructor(name,description,video,pathImage,user)
     {
-        
         this.name = name;
         this.description = description;
         this.video = video;
+        this.pathImage = pathImage
         this.user = user;
-        this.date = Date.now;
+        this.likes = 0;
+        this.dislikes = 0;
+        this.date = Date.now();
     }
     toJson()
     {
-        if(this.name = '') throw 'No name';
-        if(this.description = '') throw 'No description';
-        if(this.video = '') throw 'No video';
-        if(this.user = '') throw 'No user';
-        const result = 
-        {
-            'name':this.name,
-            'description': this.description,
-            'video': this.video,
-            'user':this.user
-        };
-        return result;
+        return JSON.parse(JSON.stringify(this))
     }
     save()
     {
-        crud.add(this.toJson());
+        crud.addVideo(this.toJson());
     }
 }
 module.exports = Video;

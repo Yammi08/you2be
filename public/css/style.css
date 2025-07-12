@@ -93,7 +93,7 @@ input,textarea
     border-color: white;
     border-radius: 5px;
     color: gray;
-    transition: all 0.5s;
+    transition: all 0.05s;
 }
 .btn:hover
 {
@@ -104,6 +104,11 @@ input,textarea
 {
     background-color: rgb(160, 160, 160);
     color: whitesmoke;
+}
+.btn:disabled {
+    background-color: rgba(128, 128, 128, 0.199);
+    color: gray;
+    cursor:initial;
 }
 .front-page
 {

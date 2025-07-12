@@ -1,0 +1,10 @@
+
+<div class="content">
+    <%for(let element of elements){%>
+        <div class="div-video" id=<%=element._id%>>
+            <p ><%=element.name%></p> 
+            <a href=<%=element.video%>><img class="image-page" src=<%=element.pathImage%> alt=""></a>
+            <p><%=element.description%></p>
+        </div>
+    <%}%>
+</div>

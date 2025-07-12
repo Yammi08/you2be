@@ -1,16 +1,62 @@
-.div-video
-{
+.div-video {
     display: inline-grid;
     background-color: aliceblue;
     border-radius: 10px;
     width: 250px;
-    height: 200px;
+    min-height: 200px;
+
     margin: 10px;
     padding: 10px;
-    
-}
-.div-video h1
-{
-    text-align: center;
 
+}
+
+p {
+    color: gray;
+}
+
+.div-video h1 {
+    text-align: center;
+    display: flex;
+}
+
+.container-content-upload {
+    background-color: #E2E2E2;
+    position: static;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    text-align: sticky;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 5%;
+}
+
+.container-upload {
+    align-content: center;
+    position: sticky;
+}
+
+.progress-elements {
+    justify-content: space-between;
+    display: flex;
+
+}
+
+.progress-container {
+    flex: 2;
+    align-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.progress {
+    height: 50px;
+    width: 300px;
+}
+.percent{
+    text-align: center;
+    align-content: center;
+    margin: 10px;
 }

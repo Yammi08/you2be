@@ -1,0 +1,14 @@
+<%- contentFor('main') %>
+
+<div class="center-vertical-video">
+    <form action="/account/add" enctype="multipart/form-data" id="video_add" class="form-vertical" method="dialog" required>
+        <input name="video" type="file" name="file" id="file" accept="video/mp4" required>
+        <input name="name" type="text" placeholder="titulo" class="item-vertical">
+        <textarea name="description" placeholder="descripcion" id="descripcion" cols="30" rows="10" class="item-vertical description"></textarea>
+        <button type="submit" class="btn item-vertical" id="submit-archive">cargar</button>
+    </form>
+</div>
+<%- contentFor('scripts') %>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/loading.js"></script>
